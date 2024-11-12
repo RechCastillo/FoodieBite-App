@@ -1,5 +1,5 @@
 # FoodieBite
-FoodieBite App.
+FoodieBite Mobile App.
 
 # Features
 * Share Projects
