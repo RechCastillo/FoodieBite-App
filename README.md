@@ -1,4 +1,4 @@
-# TechFolio Hub
+# FoodieBite
 FoodieBite App.
 
 # Features
