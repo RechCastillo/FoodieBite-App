@@ -29,6 +29,6 @@ FoodieBite App.
 
 # Tabs Screen
 <img src="assets/images/tabs.jpg">  
-<img src="assets/images/HomeTab.jpg">
 <img src="assets/images/SearchTab.jpg">
+<img src="assets/images/CartTab.jpg">
 <img src="assets/images/ProfileTab.jpg">
