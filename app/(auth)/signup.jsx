@@ -1,50 +1,45 @@
+import LoginButton from "../../components/SignupButton";
 import React from "react";
-import { Link } from "expo-router";
+import { Link, Redirect, router } from "expo-router";
 import { Image, ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { images } from "../../constants";
 
 const Signup = () => {  
   return (  
-    <ImageBackground   
-    source={require('./../assets/images/background(1).jpg')} // Replace with your background image path  
-    style={styles.background}  
-  >  
-
-    <View style={styles.container}>  
-      <Text style={styles.title}>SIGN UP</Text>  
+    <View style={styles.container}> 
+    <View className="w-full justify-center items-center h-full px-4 my-6">
+              <Image source={images.foodiebite_logo}
+                resizemode='contain'
+                className="w-[260px] h-[45px] "
+              /> 
+      <Text className="text-xl text-orange-400  mt-5 mb-8 font-u_regular ">Signup to FoodieBite</Text>
       <TextInput style={styles.input} placeholder="Fullname" />  
       <TextInput style={styles.input} placeholder="Email" />  
       <TextInput style={styles.input} placeholder="Password" secureTextEntry />  
       <TextInput style={styles.input} placeholder="Phone Number" />  
-      <TouchableOpacity style={styles.button}>  
-        <Link href="/login"style={styles.buttonText}>Create Account</Link>  
-      </TouchableOpacity>  
+     
+      <LoginButton
+             title=" Create Account  "
+             handlePress={()=> router.push('/login')}
+             containerStyles="w-72 mt-7 "
+            ></LoginButton>
+
       <Text style={styles.loginText}>  
         Already have an Account? <Link href="/login" className="font-u_regular text-orange-400">Login</Link>  
       </Text>  
-      <View style={styles.iconContainer}>  
-        <TouchableOpacity>  
-          <Image source={require('./../assets/icons/facebook.png')} style={styles.icon} />  
-        </TouchableOpacity>  
-        <TouchableOpacity>  
-          <Image source={require('./../assets/icons/google.png')} style={styles.icon} />  
-        </TouchableOpacity>  
-        <TouchableOpacity>  
-          <Image source={require('./../assets/icons/twitter.png')} style={styles.icon} />  
-        </TouchableOpacity>  
-      </View>  
+
     </View> 
-    </ImageBackground> 
+    </View>
+    
   );  
 };  
 
 const styles = StyleSheet.create({  
-  background: {  
-    flex: 1,  
-    justifyContent: "center",  
-  },  
   container: {  
     flex: 1,  
     padding: 25,  
+    alignItems: "center",  
+    backgroundColor: "#E0E0E0",
     justifyContent: 'center',  
   },  
   title: {  
@@ -54,13 +49,15 @@ const styles = StyleSheet.create({
     marginBottom: 35,  
   },  
   input: {  
-    height: 50,  
-    borderColor: '#D3D3D3', // Light gray border  
-    backgroundColor: "#EAEAEA", 
-    borderWidth: 1,  
-    borderRadius: 5,  
+    width: "105%",  
+    height: 55,  
+    backgroundColor: "#fff",
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 10,  
     paddingHorizontal: 10,  
-    marginBottom: 25,  
+    marginBottom: 18, 
+    elevation: 1, 
   },  
   button: {  
     backgroundColor:  "#F87910", // Orange button  

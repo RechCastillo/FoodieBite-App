@@ -1,16 +1,18 @@
+import LoginButton from "../../components/LoginButton";
 import React from "react";
-import { Link } from "expo-router";
-import { Image, ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Link, Redirect, router } from "expo-router";
+import { Image, ImageBackgroundund, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { images } from "../../constants";
 
 const Login = () => {  
   return (  
-    <ImageBackground   
-    source={require('./../assets/images/background(1).jpg')} // Replace with your background image path  
-    style={styles.background}  
-  >  
-
     <View style={styles.container}>  
-      <Text style={styles.title}>LOGIN</Text>  
+    <View className="w-full justify-center items-center h-full px-4 my-6">
+              <Image source={images.foodiebite_logo}
+                resizemode='contain'
+                className="w-[260px] h-[45px] "
+              />
+              <Text className="text-xl text-orange-400 mt-5 mb-8 font-u_regular ">Log in to FoodieBite</Text>
       <TextInput  
         style={styles.input}  
         placeholder="Email"  
@@ -22,43 +24,44 @@ const Login = () => {
         placeholderTextColor="#888"  
         secureTextEntry  
       />  
+      
       <TouchableOpacity>  
         <Text style={styles.forgotPassword}>Forget Your Password?</Text>  
       </TouchableOpacity>  
       <View style={styles.separator} />  
-      <TouchableOpacity style={styles.loginButton}>  
-        <Link href="/home"style={styles.loginButtonText}>Login</Link>  
-      </TouchableOpacity>  
+      <LoginButton
+             title=" Login "
+             handlePress={()=> router.push('/home')}
+             containerStyles="w-72 mt-7 "
+            ></LoginButton>
+
       <Text style={styles.signupText}>  
         Don’t have an Account? <Link href="/signup" className="font-u_regular text-orange-400">Sign Up</Link>  
       </Text>  
-
+      
       <View style={styles.iconContainer}>  
         <TouchableOpacity>  
-          <Image source={require('./../assets/icons/facebook.png')} style={styles.icon} />  
+          <Image source={require('../../assets/icons/facebook.png')} style={styles.icon} />  
         </TouchableOpacity>  
         <TouchableOpacity>  
-          <Image source={require('./../assets/icons/google.png')} style={styles.icon} />  
+          <Image source={require('../../assets/icons/google.png')} style={styles.icon} />  
         </TouchableOpacity>  
         <TouchableOpacity>  
-          <Image source={require('./../assets/icons/twitter.png')} style={styles.icon} />  
+          <Image source={require('../../assets/icons/twitter.png')} style={styles.icon} />  
         </TouchableOpacity>  
       </View>  
-
-    </View>  
-    </ImageBackground>  
+    </View>
+     </View>
+   
   );  
 };  
 
 const styles = StyleSheet.create({   
-  background: {  
-    flex: 1,  
-    justifyContent: "center",  
-  },  
   container: {  
     flex: 1,  
     alignItems: "center",  
-    justifyContent: "center",  
+    justifyContent: "center", 
+    backgroundColor: "#E0E0E0", 
     padding: 20,  
   },  
   title: {  
@@ -67,13 +70,17 @@ const styles = StyleSheet.create({
     marginBottom: 30,  
   },  
   input: {  
-    width: "100%",  
-    height: 50,  
-    backgroundColor: "#EAEAEA",  
-    borderRadius: 5,  
+    width: "105%",  
+    height: 55,  
+    backgroundColor: "#fff",  
+    borderRadius: 10,  
+    borderWidth: 1,
+    borderColor: "#ccc",
     paddingHorizontal: 10,  
-    marginBottom: 15,  
+    marginBottom: 18, 
+    elevation: 1, 
   },  
+
   forgotPassword: {  
     color: "#888", 
     marginBottom: 20,  

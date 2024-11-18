@@ -7,7 +7,7 @@ import { images } from "../constants";
 export default function App() {  
   return (  
     <ImageBackground   
-    source={require('./../assets/images/background(2).jpg')} // Replace with your background image path  
+    source={require('./../assets/images/background(1).jpg')} // Replace with your background image path  
     style={{ flex: 1 }}  
   >    
 
@@ -26,14 +26,14 @@ export default function App() {
             resizeMode='contain'
           />
           <View className="relative mt-5">
-            <Text className="Text-2x1 text-white font-u_bold
+            <Text className="text-l text-white font-u_bold
             text-center">Enjoy your food</Text>
-             <Text className="Text-2x1 text-white font-u_bold
+             <Text className="text-l text-white font-u_bold
             text-center">enjoy your first bite.</Text>
 
             <CustomButton
              title=" GET STARTED "
-             handlePress={()=> router.push('/login')}
+             handlePress={()=> router.push('./login')}
              containerStyles="w-72 mt-7 "
             >
 

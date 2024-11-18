@@ -2,10 +2,10 @@
 FoodieBite App.
 
 # Features
-* Share Projects
-* Message other developers
-* Rate others work
-* Search other developers
+* Order History and Recommendations
+* Search Functionality
+* Cart Management
+* User Authentication and Profile Management
 
 # Course Overview
 * Basic React Native Components
@@ -29,3 +29,6 @@ FoodieBite App.
 
 # Tabs Screen
 <img src="assets/images/tabs.jpg">  
+<img src="assets/images/HomeTab.jpg">
+<img src="assets/images/SearchTab.jpg">
+<img src="assets/images/ProfileTab.jpg">
