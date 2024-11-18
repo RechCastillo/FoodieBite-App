@@ -1,7 +1,7 @@
 import LoginButton from "../../components/LoginButton";
 import React from "react";
 import { Link, Redirect, router } from "expo-router";
-import { Image, ImageBackgroundund, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { images } from "../../constants";
 
 const Login = () => {  
